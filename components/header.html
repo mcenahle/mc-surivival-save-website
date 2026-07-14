@@ -118,7 +118,8 @@
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <iconify-icon icon="mdi:info"></iconify-icon> 本存档相关信息
+                <iconify-icon icon="mdi:information"></iconify-icon>
+                本存档相关信息
                 <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
@@ -126,8 +127,8 @@
                   <a
                     href="javascript:void(0)"
                     data-toggle="modal"
-                    data-target="#saveSeedModal"
-                    >获取种子
+                    data-target="#saveInfoModal"
+                    >本存档详细信息
                     <iconify-icon icon="ic:outline-link"></iconify-icon
                   ></a>
                 </li>
@@ -152,10 +153,10 @@
 
 <div
   class="modal fade"
-  id="saveSeedModal"
+  id="saveInfoModal"
   tabindex="-1"
   role="dialog"
-  aria-labelledby="saveSeedModalLabel"
+  aria-labelledby="saveInfoModalLabel"
   aria-hidden="true"
 >
   <div class="modal-dialog">
@@ -169,13 +170,18 @@
         >
           &times;
         </button>
-        <h4 class="modal-title" id="saveSeedModalLabel">
-          <iconify-icon icon="mdi:map-search"></iconify-icon> 本存档种子
+        <h4 class="modal-title" id="saveInfoModalLabel">
+          <iconify-icon icon="mdi:information"></iconify-icon> 本存档详细信息
         </h4>
       </div>
       <div class="modal-body">
         <p>
+          <iconify-icon icon="mdi:map-search"></iconify-icon> 本存档种子：
           <code id="seed">3839762216283805005</code>
+        </p>
+        <p>
+          <iconify-icon icon="mdi:google-gamepad"></iconify-icon>
+          游戏版本：26.1.1
         </p>
       </div>
       <div class="modal-footer">
@@ -185,8 +191,15 @@
           class="btn btn-primary"
           onclick="copySaveSeed()"
         >
-          <iconify-icon icon="si:copy-line"></iconify-icon> 复制
+          <iconify-icon icon="si:copy-line"></iconify-icon> 复制种子
         </button>
+        <a
+          href="https://minecraftsearch.com/zh-CN/%E5%B7%A5%E5%85%B7/%E7%A7%8D%E5%AD%90%E5%9C%B0%E5%9B%BE#seed=3839762216283805005&platform=java_26.1.2&dimension=overworld&x=-159&z=-95&zoom=17.843"
+          target="_blank"
+          class="btn btn-info"
+        >
+          <iconify-icon icon="mdi:layers-search"></iconify-icon> 在线查询该种子
+        </a>
         <button type="button" class="btn btn-default" data-dismiss="modal">
           关闭
         </button>
