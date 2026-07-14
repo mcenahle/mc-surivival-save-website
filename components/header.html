@@ -132,7 +132,15 @@
                   ></a>
                 </li>
                 <li class="divider"></li>
-                <li><a href="#">另一个分离的链接</a></li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    data-toggle="modal"
+                    data-target="#getSaveModal"
+                    >下载存档
+                    <iconify-icon icon="ic:outline-link"></iconify-icon
+                  ></a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -179,6 +187,70 @@
         >
           <iconify-icon icon="si:copy-line"></iconify-icon> 复制
         </button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          关闭
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="getSaveModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="getSaveModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-hidden="true"
+        >
+          &times;
+        </button>
+        <h4 class="modal-title" id="getSaveModalLabel">
+          <iconify-icon icon="mdi:download"></iconify-icon> 下载存档
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div class="checkbox" style="margin-bottom: 10px">
+          <div class="alert alert-warning">
+            <b>这是一份使用说明。</b>
+            <hr />
+            <ol>
+              <li>本存档为个人游玩记录，仅供学习、交流与娱乐使用；</li>
+              <li>请勿将本存档用于商业用途；</li>
+              <li>存档可能包含未完成建筑、测试内容以及个人游玩痕迹；</li>
+              <li>
+                由于 Minecraft
+                版本、模组环境等差异，存档在其他环境中可能存在兼容性问题；
+              </li>
+              <li>下载并使用本存档，即表示你已了解以上内容。</li>
+            </ol>
+          </div>
+          <label>
+            <input type="checkbox" id="agreeCheck" />
+            我已经了解了下载存档须知。<i style="color: #919191"
+              >勾选此复选框以下载存档...</i
+            >
+          </label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a
+          href="https://example.com"
+          target="_blank"
+          id="downloadBtn"
+          class="btn btn-primary disabled"
+        >
+          下载
+        </a>
         <button type="button" class="btn btn-default" data-dismiss="modal">
           关闭
         </button>

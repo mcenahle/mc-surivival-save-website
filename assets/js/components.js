@@ -1,5 +1,15 @@
+loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js");
+
+loadScript(
+  "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js",
+);
+
+loadScript(
+  "https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js",
+);
+
 function loadComponent(id, file) {
-  fetch(file)
+  return fetch(file)
     .then((res) => res.text())
     .then((data) => {
       document.querySelector(id).innerHTML = data;
@@ -31,12 +41,16 @@ function copySaveSeed() {
   }, 2000);
 }
 
-loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js");
+loadComponent("#header", "/components/header.html").then(() => {
+  const agreeCheck = document.getElementById("agreeCheck");
 
-loadScript(
-  "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js",
-);
+  const downloadBtn = document.getElementById("downloadBtn");
 
-loadScript(
-  "https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js",
-);
+  agreeCheck.addEventListener("change", function () {
+    if (this.checked) {
+      downloadBtn.classList.remove("disabled");
+    } else {
+      downloadBtn.classList.add("disabled");
+    }
+  });
+});
